@@ -1,3 +1,5 @@
+package Demo_B1;
+
 public class DisplayDatatype {
     public static void main(String[] args) {
         int i = 10;
