@@ -3,26 +3,39 @@ package Demo_B2;
 import java.util.Scanner;
 
 public class Check_SNT {
-    public static void main(String[] args) {
-        int number;
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Nhập số cần kiểm tra: ");
-        number = scan.nextInt();
-        if (number < 2){
-            System.out.println("Đây không phải là số nguyên tố ");
+    static boolean isNumberPrime(int n){
+        if (n <2 ){
+            return false;
         }else {
-            boolean check = true;
-            for (int i = 2; i < Math.sqrt(number); i++) {
-                if (number % i == 0){
-                    check = false;
-                    break;
+            for (int i = 2; i < Math.sqrt(n); i++) {
+                if (n % i == 0){
+                    return false;
                 }
             }
-            if (check){
-                System.out.println("Đây là số nguyên tố");
-            }else {
-                System.out.println("Đây không phải là số nguyên tố ");
-            }
+            return true;
         }
     }
-}
+    static void display(){
+        int num;
+        int i = 2;
+        int count = 0;
+        Scanner scanner = new Scanner(System.in);
+        num = scanner.nextInt();
+        while (count <= num){
+            if (isNumberPrime(i)){
+                System.out.print(" " + i);
+                count ++;
+            }
+            i++;
+        }
+    }
+    public static void main(String[] args) {
+            display();
+    }
+
+    }
+
+
+
+
+
