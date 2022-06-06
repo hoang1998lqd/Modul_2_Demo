@@ -45,6 +45,7 @@ public class Rectangle {
         double height = scanner.nextDouble();
         // Gọi class đã được tạo: "Rectangle" là tên class; "rectangle" là biến tự đăt.
         Rectangle rectangle = new Rectangle(width, height);
+//        rectangle.setHeight(10);
         System.out.println("Hiển thị thông tin hình chữ nhật: " + rectangle.display());
         System.out.println("Diện tích hình chữ nhật là: " + rectangle.getArea() );
         System.out.println("Chu vi hình chữ nhật là: " + rectangle.getPerimeter() );
