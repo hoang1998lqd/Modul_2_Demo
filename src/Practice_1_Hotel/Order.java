@@ -4,8 +4,6 @@ package Practice_1_Hotel;
 
 import java.time.LocalDate;
 
-import static java.time.temporal.ChronoUnit.DAYS;
-
 public class Order  {
     // Ngày nhận phòng.
     private LocalDate checkin;
@@ -28,18 +26,6 @@ public class Order  {
         this.users = users;
         this.room = room;
     }
-     double getTotalPrice(){
-        double price ;
-        double result;
-        // Đếm ngày ở khách sạn.
-        long day = DAYS.between(checkin,checkout);
-        // Nhận giá phòng.
-         price = room.getPrice();
-        result = price * day;
-        return result;
-    }
-
-
     public LocalDate getCheckin() {
         return checkin;
     }
