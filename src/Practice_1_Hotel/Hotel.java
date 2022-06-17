@@ -12,15 +12,6 @@ public class Hotel {
     public void add(Room room){
         rooms.add(room);
     }
-//    public long getTotal(){
-//        long total = 0;
-//        for (Order order: orders) {
-//            total += order.getTotalPrice();
-//        }
-//        return total;
-//    }
-
-
 
     public Hotel(ArrayList<Users> users, ArrayList<Room> rooms, ArrayList<Order> orders) {
         this.users = users;

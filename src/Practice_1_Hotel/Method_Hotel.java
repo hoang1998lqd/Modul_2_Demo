@@ -8,13 +8,11 @@ import java.util.Scanner;
 import static java.time.temporal.ChronoUnit.DAYS;
 
 public class Method_Hotel {
-    private ArrayList<Users> users;
-    private  Menu_room menuRoom = new Menu_room();
-    private HashMap<String, Users> managerHotel = new HashMap<>();
+    private final ArrayList<Users> users;
+    private final Menu_room menuRoom = new Menu_room();
+    private final HashMap<String, Users> managerHotel = new HashMap<>();
     public Method_Hotel(){
         users = new ArrayList<>();
-
-
     }
 
     // Hiển thị danh sách phòng.
@@ -29,74 +27,124 @@ public class Method_Hotel {
         int choice = scanner.nextInt();
         switch (choice){
             case 201:
-                System.out.println("Bạn đã đặt phòng 201 thành công." );
                 Room room = menuRoom.getRoomByName("Phòng 201");
-                room.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 201"), users.get(users.size()-1));
-                System.out.println(room);
+                if (!room.getStatus().equals("Off")){
+                    System.out.println("Bạn đã đặt phòng 201 thành công." );
+                    room.setStatus("Off");
+                    managerHotel.put(menuRoom.getNameRoom("Phòng 201"), users.get(users.size()-1));
+                    System.out.println(room);
+                }
+                else {
+                    System.out.println("Phòng đã có khách thuê !!!");
+                }
                 break;
             case 202:
-                System.out.println("Bạn đã đặt phòng 202 thành công." );
                 Room room1 = menuRoom.getRoomByName("Phòng 202");
-                room1.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 202"),users.get(users.size()-1));
-                System.out.println(room1);
+                if (!room1.getStatus().equals("Off")){
+                    System.out.println("Bạn đã đặt phòng 202 thành công." );
+                    room1.setStatus("Off");
+                    managerHotel.put(menuRoom.getNameRoom("Phòng 202"),users.get(users.size()-1));
+                    System.out.println(room1);
+                }
+                else {
+                    System.out.println("Phòng đã có khách thuê !!!");
+                }
                 break;
             case 203:
-                System.out.println("Bạn đã đặt phòng 203 thành công." );
                 Room room2 = menuRoom.getRoomByName("Phòng 203");
-                room2.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 203"),users.get(users.size()-1));
-                System.out.println(room2);
+                if (!room2.getStatus().equals("Off")){
+                    System.out.println("Bạn đã đặt phòng 203 thành công." );
+                    room2.setStatus("Off");
+                    managerHotel.put(menuRoom.getNameRoom("Phòng 203"),users.get(users.size()-1));
+                    System.out.println(room2);
+                }
+                else {
+                    System.out.println("Phòng đã có khách thuê !!!");
+                }
                 break;
                 case 204:
-                System.out.println("Bạn đã đặt phòng 204 thành công." );
-                Room room3 = menuRoom.getRoomByName("Phòng 204");
-                room3.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 204"),users.get(users.size()-1));
-                System.out.println(room3);
+                    Room room3 = menuRoom.getRoomByName("Phòng 204");
+                    if (!room3.getStatus().equals("Off")){
+                        System.out.println("Bạn đã đặt phòng 204 thành công." );
+                        room3.setStatus("Off");
+                        managerHotel.put(menuRoom.getNameRoom("Phòng 204"),users.get(users.size()-1));
+                        System.out.println(room3);
+                    }
+                    else {
+                        System.out.println("Phòng đã có khách thuê !!!");
+                    }
                 break;
                 case 205:
-                System.out.println("Bạn đã đặt phòng 205 thành công." );
-                Room room4 = menuRoom.getRoomByName("Phòng 205");
-                room4.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 205"),users.get(users.size()-1));
-                System.out.println(room4);
+                    Room room4 = menuRoom.getRoomByName("Phòng 205");
+                    if (!room4.getStatus().equals("Off")){
+                        System.out.println("Bạn đã đặt phòng 205 thành công." );
+                        room4.setStatus("Off");
+                        managerHotel.put(menuRoom.getNameRoom("Phòng 205"),users.get(users.size()-1));
+                        System.out.println(room4);
+                    }
+                    else {
+                        System.out.println("Phòng đã có khách thuê !!!");
+                    }
                 break;
                 case 301:
-                System.out.println("Bạn đã đặt phòng 301 thành công." );
-                Room room5 = menuRoom.getRoomByName("Phòng 301");
-                room5.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 202"),users.get(users.size()-1));
-                System.out.println(room5);
+                    Room room5 = menuRoom.getRoomByName("Phòng 301");
+                    if (!room5.getStatus().equals("Off")){
+                        System.out.println("Bạn đã đặt phòng 301 thành công." );
+                        room5.setStatus("Off");
+                        managerHotel.put(menuRoom.getNameRoom("Phòng 202"),users.get(users.size()-1));
+                        System.out.println(room5);
+                    }
+                    else {
+                        System.out.println("Phòng đã có khách thuê !!!");
+                    }
                 break;
                 case 302:
-                System.out.println("Bạn đã đặt phòng 302 thành công." );
-                Room room6 = menuRoom.getRoomByName("Phòng 302");
-                room6.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 202"),users.get(users.size()-1));
-                System.out.println(room6);
+                    Room room6 = menuRoom.getRoomByName("Phòng 302");
+                    if (!room6.getStatus().equals("Off")){
+                        System.out.println("Bạn đã đặt phòng 302 thành công." );
+                        room6.setStatus("Off");
+                        managerHotel.put(menuRoom.getNameRoom("Phòng 202"),users.get(users.size()-1));
+                        System.out.println(room6);
+                    }
+                    else {
+                        System.out.println("Phòng đã có khách thuê !!!");
+                    }
                 break;
                 case 303:
-                System.out.println("Bạn đã đặt phòng 303 thành công." );
-                Room room7 = menuRoom.getRoomByName("Phòng 303");
-                room7.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 303"),users.get(users.size()-1));
-                System.out.println(room7);
+                    Room room7 = menuRoom.getRoomByName("Phòng 303");
+                    if (!room7.getStatus().equals("Off")){
+                        System.out.println("Bạn đã đặt phòng 303 thành công." );
+                        room7.setStatus("Off");
+                        managerHotel.put(menuRoom.getNameRoom("Phòng 303"),users.get(users.size()-1));
+                        System.out.println(room7);
+                    }
+                    else {
+                        System.out.println("Phòng đã có khách thuê !!!");
+                    }
                 break;
                 case 304:
-                System.out.println("Bạn đã đặt phòng 304 thành công." );
-                Room room8 = menuRoom.getRoomByName("Phòng 304");
-                room8.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 304"),users.get(users.size()-1));
-                System.out.println(room8);
+                    Room room8 = menuRoom.getRoomByName("Phòng 304");
+                    if (!room8.getStatus().equals("Off")){
+                        System.out.println("Bạn đã đặt phòng 304 thành công." );
+                        room8.setStatus("Off");
+                        managerHotel.put(menuRoom.getNameRoom("Phòng 304"),users.get(users.size()-1));
+                        System.out.println(room8);
+                    }
+                    else {
+                        System.out.println("Phòng đã có khách thuê !!!");
+                    }
                 break;
                 case 305:
-                System.out.println("Bạn đã đặt phòng 305 thành công." );
-                Room room9 = menuRoom.getRoomByName("Phòng 305");
-                room9.setStatus("Off");
-                managerHotel.put(menuRoom.getNameRoom("Phòng 305"),users.get(users.size()-1));
-                System.out.println(room9);
+                    Room room9 = menuRoom.getRoomByName("Phòng 305");
+                    if (!room9.getStatus().equals("Off")){
+                        System.out.println("Bạn đã đặt phòng 305 thành công." );
+                        room9.setStatus("Off");
+                        managerHotel.put(menuRoom.getNameRoom("Phòng 305"),users.get(users.size()-1));
+                        System.out.println(room9);
+                    }
+                    else {
+                        System.out.println("Phòng đã có khách thuê !!!");
+                    }
                 break;
         }
     }
@@ -106,6 +154,9 @@ public class Method_Hotel {
        for (Room room: menuRoom.listRooms){
            if (!room.getStatus().equals("Off")){
                System.out.println(room);
+           }
+           else {
+               System.out.println("Hết phòng cho thuê !!!!!");
            }
        }
     }
@@ -149,16 +200,15 @@ public class Method_Hotel {
             Room room = menuRoom.getRoomByName("Phòng 201");
             price = room.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room.setStatus("On");
-            nameRoomCheckOut(scanner);
             break;
 
         case 202:
             Room room1 = menuRoom.getRoomByName("Phòng 202");
             price = room1.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room1.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room1.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room1.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
@@ -166,7 +216,7 @@ public class Method_Hotel {
             Room room2 = menuRoom.getRoomByName("Phòng 203");
             price = room2.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room2.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room2.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room2.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
@@ -174,7 +224,7 @@ public class Method_Hotel {
             Room room3 = menuRoom.getRoomByName("Phòng 204");
             price = room3.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room3.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room3.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room3.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
@@ -182,7 +232,7 @@ public class Method_Hotel {
             Room room4 = menuRoom.getRoomByName("Phòng 205");
             price = room4.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room4.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room4.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room4.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
@@ -190,7 +240,7 @@ public class Method_Hotel {
             Room room5 = menuRoom.getRoomByName("Phòng 301");
             price = room5.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room5.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room5.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room5.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
@@ -198,7 +248,7 @@ public class Method_Hotel {
             Room room6 = menuRoom.getRoomByName("Phòng 302");
             price = room6.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room6.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room6.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room6.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
@@ -206,7 +256,7 @@ public class Method_Hotel {
             Room room7 = menuRoom.getRoomByName("Phòng 303");
             price = room7.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room7.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room7.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room7.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
@@ -214,14 +264,14 @@ public class Method_Hotel {
             Room room8 = menuRoom.getRoomByName("Phòng 304");
             price = room8.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room8.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room8.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room8.setStatus("On");
             nameRoomCheckOut(scanner);
             break;case 305:
             Room room9 = menuRoom.getRoomByName("Phòng 305");
             price = room9.getPrice();
             totalPrice = price * dayOfCheck();
-            System.out.println(" Giá tiền thuê " + room9.getNameRoom() +  " của bạn là: " + totalPrice);
+            System.out.println(" Giá tiền thuê " + room9.getNameRoom() +  " của bạn là: " + totalPrice + " VNĐ");
             room9.setStatus("On");
             nameRoomCheckOut(scanner);
             break;
